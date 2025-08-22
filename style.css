@@ -1,0 +1,322 @@
+/* ----------------------------Normalize start---------------------------- */
+body,ul,li,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+/* ----------------------------Normalize end---------------------------- */
+
+/* ----------------------------custom start---------------------------- */
+/* ----------------------------header start---------------------------- */
+header {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  padding: 0 0 0 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+
+header.active {
+  background-color: #fff;
+  /* border-bottom: 1px solid red; */
+}
+
+header > .logo-img {
+  display: block;
+  width: 135px;
+  height: 40px;
+}
+
+header > .logo-img > img:last-child {
+  display: none;
+}
+
+header.active > .logo-img > img:last-child {
+  display: block;
+}
+
+header.active > .logo-img > img:first-child {
+  display: none;
+}
+
+header > nav {
+  display: flex;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+header > nav:hover * {
+  color: #1d2c4a;
+}
+
+header > nav > ul {
+  display: flex;
+}
+
+header > nav > ul > li {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header > nav > ul > li > a {
+  padding: 0 60px;
+  color: #fff;
+  font-size: 20px;
+  opacity: .7;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+header > nav > ul > li > a:hover::after {
+  opacity: 1;
+}
+
+header > nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1d2c4a;
+  opacity: 0;
+  transition: all .3s;
+}
+
+header > nav:hover > ul > li > ul {
+  opacity: 1;
+  visibility: visible;
+  transition: all .5s .1s;
+}
+
+header > nav > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+}
+
+header > nav > ul > li > ul > li > a {
+  padding: 10px 0;
+  color: #1d2c4a;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+
+header > nav > ul > li > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+header > .menu-bg {
+  background-color: #fff;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  transition: all .5s;
+}
+
+header > .menu-bg.active {
+  height: 240px;
+}
+/* ----------------------------header end---------------------------- */
+
+/* ----------------------------est-btn start---------------------------- */
+.est-btn {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1d2c4a;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 23px;
+  transition: .4s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.est-btn:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 13px 10px rgba(29, 44, 74, .3);
+}
+/* ----------------------------section-1 start---------------------------- */
+.section-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-1 > video {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-1 > ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section-1 > ul > li {
+  flex-grow: 1;
+}
+
+.section-1 > ul > li > a {
+  display: flex;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 70px;
+  height: 100%;
+  width: 100;
+  justify-content: center;
+  transition: all .4s;
+  flex-direction: column;
+  position: relative;
+}
+
+.section-1 > ul > li > a:hover {
+  background-color: #1d2c4a;
+  opacity: .7;
+}
+
+.section-1 > ul > li > a:hover > .txt {
+  transform: translateY(-20px);
+}
+
+.section-1 > ul > li > a > .txt {
+  color: #fff;
+  transform: translateY(0);
+  transition: all .4s;
+}
+
+.section-1 > ul > li > a > div > strong {
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.section-1 > ul > li > a > div > p {
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+.section-1 > ul > li > a:hover > .more {
+  opacity: 1;
+  visibility: visible;
+}
+
+.section-1 > ul > li > a > .more {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 22%;
+  transition: all .4s;
+}
+
+.section-1 > ul > li > a > .more > span {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.section-1 > ul > li > a > .more > img {
+  width: 56px;
+  height: 12px;
+  margin-left: 60px;
+}
+
+.section-1 > .main-txt {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section-1 > .main-txt > p {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.section-1 > .main-txt > strong {
+  font-size: 80px;
+  margin-top: 25px;
+  color: #fff;
+}
+
+.section-1 > .kakao-btn {
+  transition: .4s;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  background-color: #86786f;
+}
+
+.section-1 > .kakao-btn:hover {
+  background-color: #fff;
+}
+
+.section-1 > .kakao-btn > img:last-child {
+  display: none;
+}
+
+.section-1 > .kakao-btn:hover > img:first-child {
+  display: none;
+}
+
+.section-1 > .kakao-btn:hover > img:last-child {
+  display: block;
+}
