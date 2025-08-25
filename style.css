@@ -1,5 +1,5 @@
 /* ----------------------------Normalize start---------------------------- */
-body,ul,li,h1,h2,h3,h4,h5,h6 {
+body,ul,li,h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -16,7 +16,9 @@ img {
   object-fit: cover;
 }
 /* ----------------------------Normalize end---------------------------- */
-
+body {
+  overflow-x: hidden;
+}
 /* ----------------------------custom start---------------------------- */
 /* ----------------------------header start---------------------------- */
 header {
@@ -173,6 +175,51 @@ header > .menu-bg.active {
   color: #000;
   box-shadow: 0 0 13px 10px rgba(29, 44, 74, .3);
 }
+
+.chat {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #1d2c4a;
+  padding: 30px 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.chat > div {
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.chat > div > p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  margin-right: 60px;
+}
+
+.chat > div > .input-box {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+  width: 30%;
+  max-width: 300px;
+  margin-left: 50px;
+}
+
+.chat > div > .input-box > input {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.chat > div > .input-box > input::placeholder {
+  color: #fff;
+}
+
+.chat > div > .input-box > input:focus {
+  outline: none;
+}
 /* ----------------------------section-1 start---------------------------- */
 .section-1 {
   position: absolute;
@@ -183,11 +230,13 @@ header > .menu-bg.active {
 }
 
 .section-1 > video {
-  width: 100vw;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section-1 > ul {
@@ -301,12 +350,16 @@ header > .menu-bg.active {
   position: absolute;
   z-index: 50;
   bottom: 0;
-  left: 0;
+  left: 50px;
   background-color: #86786f;
 }
 
 .section-1 > .kakao-btn:hover {
   background-color: #fff;
+}
+
+.section-1 > .kakao-btn > img {
+  width: 50%;
 }
 
 .section-1 > .kakao-btn > img:last-child {
@@ -320,3 +373,137 @@ header > .menu-bg.active {
 .section-1 > .kakao-btn:hover > img:last-child {
   display: block;
 }
+
+.section-1 > .scroll-box {
+  position: absolute;
+  left: 50%;
+  bottom: 77px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+}
+
+.section-1 > .scroll-box > span {
+  font-size: 18px;
+  color: #fff;
+}
+
+.section-1 > .scroll-box > div {
+  width: 130px;
+  height: 1px;
+  background: rgba(255, 255, 255, .2);
+  margin-left: 10px;
+  position: relative;
+}
+
+.section-1 > .scroll-box > div::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: block;
+  animation-name: scroll;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.75,0,.173,1);
+}
+
+@keyframes scroll {
+  0% {
+    transform-origin: 50% 100%;
+    transform: scaleX(1);
+  }
+  50% {
+    transform-origin: 50% 100%;
+    transform: scaleX(0);
+  }
+  50.001% {
+    transform-origin: 50% 0;
+    transform: scaleX(0);
+  }
+  100% {
+    transform-origin: 50% 0;
+    transform: scaleX(1);
+  }
+}
+/* ----------------------------section-1 end---------------------------- */
+
+/* ----------------------------section-2 start---------------------------- */
+.section-2 {
+  padding: 240px 0 ;
+  margin-top: 919px;
+}
+
+.section-2 > .txt-box-2 > p {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.section-2 > .txt-box-2 > p:last-child {
+  font-size: 26px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section-2 .swiper-box-2 {
+  margin-top: 120px;
+}
+
+.section-2 .swiper-2 {
+  max-width: 1600px;
+}
+
+.section-2 .swiper-2 .swiper-slide {
+  transition: .4s;
+}
+
+.section-2 .swiper-2 .swiper-slide:hover {
+  transform: translateY(-30px);
+  box-shadow: 18px 36px 70px 0px rgba(0, 0, 0, 0.34);
+}
+
+.section-2 .swiper-2 .swiper-slide:hover .txt-2 img {
+  transform: rotate(180deg);
+}
+
+.section-2 .swiper-2 a img {
+  aspect-ratio: 1 / 1;
+}
+
+.section-2 .swiper-2 .txt-2 {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 60px 15px 50px;
+  text-align: center;
+}
+
+.section-2 .swiper-2 .txt-2 p {
+  font-size: 36px;
+  font-weight: 800;
+  color: #393939;
+}
+
+.section-2 .swiper-2 .txt-2 p:nth-child(2) {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #393939;
+}
+
+.section-2 .swiper-2 .txt-2 > div {
+  margin-top: 40px;
+  border-bottom: 2px solid #000;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2 .swiper-2 .txt-2 > div > img {
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 10px;
+  transition: all .4s;
+}
+/* ----------------------------section-2 end---------------------------- */

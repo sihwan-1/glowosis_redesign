@@ -10,3 +10,11 @@ function Menu_1() {
   });
 }
 Menu_1();
+
+function Swiper_2() {
+  var swiper = new Swiper(".swiper-2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+  });
+}
+Swiper_2();
