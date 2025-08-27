@@ -44,3 +44,27 @@ function Swiper_3() {
   });
 }
 Swiper_3();
+
+function Swiper_5() {
+  var swiper = new Swiper(".swiper-5", {
+    slidesPerView: 2,
+    spaceBetween: 60,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+Swiper_5();
+
+function Swiper_6() {
+  var swiper = new Swiper(".swiper-6", {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    pagination: {
+      el: ".swiper-box-6 .swiper-pagination",
+      type: "progressbar",
+    },
+  });
+}
+Swiper_6();

@@ -231,6 +231,7 @@ header > .menu-bg.active {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 
 .chat > div > .select > img {
@@ -778,6 +779,11 @@ header > .menu-bg.active {
   position: relative;
   align-items: center;
   justify-content: center;
+  height: 100%;
+}
+
+.section-4 > ul > li > a > img {
+  height: 100%;
 }
 
 .section-4 > ul > li > a > .bg {
@@ -821,4 +827,340 @@ header > .menu-bg.active {
   background-color: #1d2c4a;
   border: 1px solid #1d2c4a;
   color: #fff;
+}
+/* ----------------------------section-4 end---------------------------- */
+
+/* ----------------------------section-5 start---------------------------- */
+.section-5 {
+  padding: 240px 0;
+}
+
+.section-5 > div {
+  padding: 0 20px;
+  max-width: 1640px;
+  margin: 0 auto;
+}
+
+.section-5 > div > .title-5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-5 > div > .title-5 > p {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.section-5 > div > .title-5 > a {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.section-5 > div > .title-5 > a > img {
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 10px;
+  transition: all .3s;
+}
+
+.section-5 > div > .title-5 > a:hover > img {
+  transform: rotate(180deg);
+}
+
+.section-5 .swiper-5 .swiper-slide a > .img-5 {
+  border-radius: 30px;
+  overflow: hidden;
+  max-width: 770px;
+  max-height: 346px;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .img-5 > img {
+  object-position: center;
+}
+
+.section-5 .swiper-box-5 {
+  margin-top: 60px;
+  position: relative;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 {
+  display: flex;
+  margin-top: 30px;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .txt {
+  padding-right: 20px;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .txt > div {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .txt > p {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 670px;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .plus-btn {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d2c4a;
+  position: relative;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .plus-btn:hover::after {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .plus-btn:hover::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .plus-btn::before {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background: #fff;
+  transform-origin: center center;
+  transition: .5s;
+}
+
+.section-5 .swiper-5 .swiper-slide a > .txt-5 > .plus-btn::after {
+  display: block;
+  content: '';
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background: #fff;
+  transform-origin: center center;
+  transition: .5s;
+}
+
+.section-5 .swiper-box-5 .swiper-pagination {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-5 .swiper-box-5 .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  box-sizing: content-box;
+  padding: 6px;
+  position: relative;
+  border: 2px solid transparent;
+  background: #fff;
+  opacity: 1;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.section-5 .swiper-box-5 .swiper-pagination-bullet-active {
+  border-color: #1d2c4a;
+}
+
+.section-5 .swiper-box-5 .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #1d2c4a;
+  z-index: 1;
+  border-radius: 50%;
+}
+/* ----------------------------section-5 end---------------------------- */
+/* ----------------------------section-6 start---------------------------- */
+.section-6 {
+  padding-left: max(calc((100% - 1640px) / 2 + 20px));
+  padding-bottom: 240px;
+}
+
+.section-6 > .box-6 {
+  display: flex;
+}
+
+.section-6 > .box-6 > .txt-box-6 {
+  margin-right: 300px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.section-6 > .box-6 .swiper-box-6 {
+  width: 70%;
+  position: relative;
+}
+
+.section-6 > .box-6 .swiper-box-6 .swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-6 > .box-6 .swiper-box-6 .swiper-slide > .img-6 {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-6 > .box-6 .swiper-box-6 .swiper-slide .txt-6 {
+  font-size: 22px;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 600;
+  color: #393939;
+}
+
+.swiper-box-6 .swiper-pagination {
+  bottom: -64px !important;
+  top: unset !important;
+  background:rgba(0, 0, 0, .25) !important;
+  height: 2px !important;
+}
+
+.swiper-box-6 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #1d2c4a;
+}
+/* ----------------------------section-6 end---------------------------- */
+/* ----------------------------section-7 start---------------------------- */
+.section-7 {
+  padding: 220px 0;
+  position: relative;
+}
+
+.section-7 > .bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(/img/imgi_51_main-contact2.jpg) no-repeat center center / cover;
+}
+
+.section-7 > .bg-img > .bg-7 {
+  background: #1d2c4a;
+  height: 100%;
+  opacity: .5;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.section-7 > .txt-box-7 {
+  padding: 0 20px;
+  max-width: 1640px;
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+
+}
+
+.section-7 > .txt-box-7 > h3 {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.section-7 > .txt-box-7 > p {
+  margin-top: 22px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.section-7 > .txt-box-7 > a {
+  margin-top: 90px;
+  white-space: nowrap;
+  font-size: 18px;
+  display: inline-block;
+  padding-bottom: 7px;
+  position: relative;
+  color: #fff;
+}
+
+.section-7 > .txt-box-7 > a::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+/* ----------------------------section-7 end---------------------------- */
+
+/* ----------------------------footer start---------------------------- */
+footer {
+  background: #242424;
+  position: relative;
+  z-index: 5;
+  padding: 65px 0 180px;
+  color: #7e7e7e;
+}
+
+footer > .footer-box {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+  max-width: 1640px;
+  padding: 0 20px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+footer > .footer-box > .company > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > .footer-box > .company > div > strong {
+  font-size: 18px;
+  color: #fff;
+}
+footer > .footer-box > .company > div > b {
+  display: block;
+  font-size: 37px;
+  margin: 3px 0 20px;
+  line-height: 1;
+}
+
+footer > .footer-box > .company > div > p {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+footer > .footer-box > .company > div > .email {
+  display: flex;
+  font-size: 15px;
+}
+
+footer > .footer-box > .company > div > .email > p {
+  color: #fff;
+  margin-right: 4px;
 }
