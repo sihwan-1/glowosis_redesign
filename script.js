@@ -1,3 +1,5 @@
+AOS.init();
+
 function Menu_1() {
   $('header > nav').mouseenter(function() {
     $('.menu-bg').addClass('active');
@@ -10,6 +12,25 @@ function Menu_1() {
   });
 }
 Menu_1();
+
+$(function() {
+  // 윈도우에서 스크롤 이벤트 발생 시 실행
+  $(window).on('scroll', function() {
+    function Topbtn() {
+      if ($(window).scrollTop() > 150) {
+        $('.top-btn').addClass('show');
+      } else {
+        $('.top-btn').removeClass('show');
+      }
+    }
+    Topbtn();
+  });
+
+  // 버튼 클릭 시 맨 위로 부드럽게 스크롤
+  $('.top-btn').on('click', function() {
+    $('html, body').animate({scrollTop: 0}, 600);
+  });
+});
 
 function Select() {
   $('.select').click(function() {
@@ -50,7 +71,7 @@ function Swiper_5() {
     slidesPerView: 2,
     spaceBetween: 60,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-box-5 .swiper-pagination",
       clickable: true,
     },
   });

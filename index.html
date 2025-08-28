@@ -7,9 +7,15 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   
@@ -70,6 +76,10 @@
     </nav>
   </header>
 
+  <div class="top-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M197.8 34.5c-1.5-1.6-3.6-2.5-5.8-2.5s-4.3 .9-5.8 2.5l-184 192c-3.1 3.2-2.9 8.3 .2 11.3s8.3 2.9 11.3-.2L184 59.9 184 472c0 4.4 3.6 8 8 8s8-3.6 8-8l0-412.1L370.2 237.5c3.1 3.2 8.1 3.3 11.3 .2s3.3-8.1 .2-11.3l-184-192z"></path></svg>
+  </div>
+
   <a href="#" class="est-btn">견적
     <br>
     신청</a>
@@ -111,6 +121,10 @@
       </div>
 
       <div class="btn">상담신청</div>
+
+      <div class="chat-img-box">
+        <img src="/img/imgi_30_SMS_icon01.png" alt="">
+      </div>
     </div>
   </div>
 
@@ -176,8 +190,8 @@
     </ul>
 
     <div class="main-txt">
-      <p>프리미엄 공간 스타일링</p>
-      <strong>EXTERIOR MASTER</strong>
+      <p data-aos="fade-up" data-aos-duration="1500">프리미엄 공간 스타일링</p>
+      <strong data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">EXTERIOR MASTER</strong>
     </div>
 
     <a href="#" class="kakao-btn">
@@ -194,14 +208,14 @@
 
   <section class="section-2">
     <div class="txt-box-2">
-      <p>SKYLOUVER PRODUCT</p>
-      <p>블레이드 개폐 조절로 통풍과 차양이 뛰어나며
+      <p data-aos="fade-up" data-aos-duration="1000">SKYLOUVER PRODUCT</p>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">블레이드 개폐 조절로 통풍과 차양이 뛰어나며
         <br>
         알루미늄 소재의 특성상 반영구적 사용이 가능한 시스템파고라입니다.        
       </p>
     </div>
 
-    <div class="swiper-box-2">
+    <div class="swiper-box-2" data-aos="fade-up">
       <div class="swiper mySwiper swiper-2">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -267,10 +281,9 @@
   </section>
 
   <section class="section-3">
-    <div class="txt-box-3">
+    <div class="txt-box-3" >
       <p>OPTION</p>
-      <p>파고라의 다양한 옵션들을 만나보세요.
-      </p>
+      <p>파고라의 다양한 옵션들을 만나보세요.</p>
     </div>
 
     <div class="swiper-box-3">
@@ -387,7 +400,7 @@
                 <div class="txt-3">
                   <span>RETRACTABLE SCREEN</span>
                   <strong>스크린 방충망</strong>
-                  <p> 해충을 차단하면서도 통풍을 원활하게 해주는 제품으로 내구성이 뛰어나고,\
+                  <p> 해충을 차단하면서도 통풍을 원활하게 해주는 제품으로 내구성이 뛰어나고,
                     UV 차단 기능이 있어 쾌적한 환경을 유지할 수 있습니다.</p>
                 </div>
 
@@ -444,14 +457,14 @@
 
   <section class="section-5">
     <div>
-      <div class="title-5">
+      <div class="title-5" data-aos="fade-up" data-aos-duration="1000">
         <p>PROJECT</p>
         <a href="#">더보기
           <img src="/img/plus.svg" alt="">
         </a>
       </div>
 
-      <div class="swiper-box-5">
+      <div class="swiper-box-5" data-aos="fade-up" data-aos-duration="1000">
         <div class="swiper mySwiper swiper-5">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -538,7 +551,7 @@
 
   <section class="section-6">
     <div class="box-6">
-      <div class="txt-box-6">
+      <div class="txt-box-6" data-aos="fade-up" data-aos-duration="1000">
         AWARD
         <br>
         AND
@@ -546,7 +559,7 @@
         PATENTS
       </div>
 
-      <div class="swiper-box-6">
+      <div class="swiper-box-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
         <div class="swiper mySwiper swiper-6">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -634,7 +647,28 @@
           </div>
         </div>
       </div>
+      <h1>
+        <a href="#">
+          <img src="/img/imgi_37_logo-wh-txt.svg" alt="">
+        </a>
+      </h1>
+      <div class="copy">
+        <span>CEO</span>
+        <span>이한울</span>
+        <span>ⓒ 2022 OSKA.</span>
+      </div>
+
+      <div class="sns-box">
+        <ul>
+          <li><a href="#"><img src="/img/imgi_23_icon-blog-wh.svg" alt=""></a></li>
+          <li><a href="#"><img src="/img/imgi_24_icon-facebook.svg" alt=""></a></li>
+          <li><a href="#"><img src="/img/imgi_25_icon-youtube.svg" alt=""></a></li>
+          <li><a href="#"><img src="/img/imgi_26_icon-insta.svg" alt=""></a></li>
+        </ul>
+      </div>
     </div>
+
+    
   </footer>
 </body>
 </html>
