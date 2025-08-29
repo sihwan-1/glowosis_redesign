@@ -1,91 +1,116 @@
-AOS.init();
+$(document).ready(function(){
+  const $scroll = $(".scroll-container");
+  const $video = $(".section-1 video");
+  let scrollPos = 0;
 
-function Menu_1() {
-  $('header > nav').mouseenter(function() {
-    $('.menu-bg').addClass('active');
-    $('header').addClass('active');
-  });
+  $scroll.on("wheel", function(e){
+    e.preventDefault();
+    const delta = e.originalEvent.deltaY;
 
-  $('header > nav').mouseleave(function() {
-    $('.menu-bg').removeClass('active');
-    $('header').removeClass('active');
-  });
-}
-Menu_1();
+    scrollPos += delta;
 
-$(function() {
-  // 윈도우에서 스크롤 이벤트 발생 시 실행
-  $(window).on('scroll', function() {
-    function Topbtn() {
-      if ($(window).scrollTop() > 150) {
-        $('.top-btn').addClass('show');
-      } else {
-        $('.top-btn').removeClass('show');
-      }
-    }
-    Topbtn();
-  });
+    const maxScroll = $scroll[0].scrollWidth - $scroll[0].clientWidth;
+    if(scrollPos < 0) scrollPos = 0;
+    if(scrollPos > maxScroll) scrollPos = maxScroll;
 
-  // 버튼 클릭 시 맨 위로 부드럽게 스크롤
-  $('.top-btn').on('click', function() {
-    $('html, body').animate({scrollTop: 0}, 600);
+    // 부드럽게 이동 duration 0.4~0.5초
+    gsap.to($scroll[0], {
+      scrollLeft: scrollPos,
+      duration: 0.45,
+      ease: "power2.out",
+      overwrite: "auto"
+    });
+
+    // 비디오 opacity 조절
+    let videoOpacity = 1 - scrollPos / $scroll[0].clientWidth;
+    if(videoOpacity < 0) videoOpacity = 0;
+    if(videoOpacity > 1) videoOpacity = 1;
+
+    gsap.to($video, {
+      opacity: videoOpacity,
+      duration: 0.45,
+      ease: "power2.out"
+    });
   });
 });
 
-function Select() {
-  $('.select').click(function() {
-    $('.select > ul').toggleClass('active')
-  });
-}
-Select();
-
 function Swiper_2() {
   var swiper = new Swiper(".swiper-2", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-  });
-}
-Swiper_2();
-
-function Swiper_3() {
-  var swiper = new Swiper(".swiper-3", {
-    slidesPerView: 1.5,       // 양옆이 보이도록
-    spaceBetween: 20,
-    centeredSlides: true,     // 가운데 정렬
+    effect: "fade",
     loop: true,
-    speed: 1000,
-    autoplay: {
-      delay: 3000, // 다음 슬라이드로 넘어가기 전 대기 시간 (3초)
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".swiper-box-3 .swiper-button-next",
-      prevEl: ".swiper-box-3 .swiper-button-prev",
-    },
-  });
-}
-Swiper_3();
-
-function Swiper_5() {
-  var swiper = new Swiper(".swiper-5", {
-    slidesPerView: 2,
-    spaceBetween: 60,
     pagination: {
-      el: ".swiper-box-5 .swiper-pagination",
+      el: ".swiper-pagination",
       clickable: true,
     },
   });
 }
-Swiper_5();
 
-function Swiper_6() {
-  var swiper = new Swiper(".swiper-6", {
-    slidesPerView: 4,
-    spaceBetween: 0,
+Swiper_2();
+
+$(function(){
+  const $box = $(".swiper-box-3");
+  const maxX = $box.width() - $(window).width();
+
+  $(window).on("scroll", function(){
+    gsap.to($box, {
+      x: -Math.min($(this).scrollTop() / $(window).height(), 1) * maxX,
+      ease: "power2.out",
+      overwrite: "auto",
+      duration: 0.3
+    });
+  });
+});
+
+function Swiper_3() {
+  var swiper = new Swiper(".swiper-3", {
+    effect: "fade",
+    loop: true,
     pagination: {
-      el: ".swiper-box-6 .swiper-pagination",
-      type: "progressbar",
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
 }
-Swiper_6();
+
+Swiper_3();
+
+$(function(){
+  const $box = $(".swiper-box-4");
+  const maxX = $box.width() - $(window).width();
+
+  $(window).on("scroll", function(){
+    gsap.to($box, {
+      x: -Math.min($(this).scrollTop() / $(window).height(), 1) * maxX,
+      ease: "power2.out",
+      overwrite: "auto",
+      duration: 0.3
+    });
+  });
+});
+
+function Swiper_4() {
+  var swiper = new Swiper(".swiper-4", {
+    effect: "fade",
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+
+Swiper_4();
+
+$(function(){
+  const $box = $(".swiper-box-5");
+  const maxX = $box.width() - $(window).width();
+
+  $(window).on("scroll", function(){
+    gsap.to($box, {
+      x: -Math.min($(this).scrollTop() / $(window).height(), 1) * maxX,
+      ease: "power2.out",
+      overwrite: "auto",
+      duration: 0.3
+    });
+  });
+});

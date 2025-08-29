@@ -4,671 +4,207 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
+  <!-- CSS 연결 -->
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
-
+  <!-- Cormorant Garamond 불러오기 -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lato 불러오기 -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- JS 연결 -->
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <a href="#" class="logo-img">
-      <img src="/img/imgi_37_logo-wh-txt.svg" alt="">
-      <img src="/img/logo-b.svg" alt="">
+    <a href="#" class="header-img-box">
+      <img src="/img/imgi_1_logo.png" alt="브랜드 로고">
     </a>
 
-    <div class="menu-bg"></div>
+    <ul class="menu-box">
+      <li>
+        <a href="#">brand</a>
+      </li>
+      <li>
+        <a href="#">shop</a>
+      </li>
+      <li>
+        <a href="#">review</a>
+      </li>
+      <li>
+        <a href="#">event</a>
+      </li>
+    </ul>
 
-    <nav>
-      <ul>
-        <li>
-          <a href="#">Company</a>
-
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">오스카 노하우</a></li>
-            <li><a href="#">쇼룸 안내</a></li>
-            <li><a href="#">3D 갤러리</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Models</a>
-
-          <ul>
-            <li><a href="#">파고라</a></li>
-            <li><a href="#">폴딩/슬라이딩/간살</a></li>
-            <li><a href="#">스크린/방충망/외장재</a></li>
-            <li><a href="#">데크</a></li>
-            <li><a href="#">난간 레일링</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Projects</a>
-
-          <ul>
-            <li><a href="#">국내</a></li>
-            <li><a href="#">해외</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        
-          <ul>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">견적사항</a></li>
-            <li><a href="#">제휴 및 지원문의</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <div class="ico-box">
+      <div><img src="/img/imgi_my.svg" alt=""></div>
+      <div><img src="/img/imgi_cart.svg" alt=""></div>
+      <div><img src="/img/imgi_search.svg" alt=""></div>
+      <div><img src="/img/imgi_menu.svg" alt=""></div>
+    </div>
   </header>
 
-  <div class="top-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M197.8 34.5c-1.5-1.6-3.6-2.5-5.8-2.5s-4.3 .9-5.8 2.5l-184 192c-3.1 3.2-2.9 8.3 .2 11.3s8.3 2.9 11.3-.2L184 59.9 184 472c0 4.4 3.6 8 8 8s8-3.6 8-8l0-412.1L370.2 237.5c3.1 3.2 8.1 3.3 11.3 .2s3.3-8.1 .2-11.3l-184-192z"></path></svg>
-  </div>
+  <div class="scroll-container">
+    <section class="section-1">
+      <video autoplay="" muted="" loop="" playsinline="">
+        <source src="https://player.vimeo.com/progressive_redirect/playback/815949359/rendition/1080p/file.mp4?loc=external&amp;signature=3de2fda34b4e3aef495c5d48a1d9e70a4fa379775e550ba557a5a63c0bf5fed5" type="video/mp4">
+      </video>
+    </section>
+
+    <section class="section-2">
+      <div class="txt-box-2">
+        <h1>Best Seller</h1>
+        <span>무루무루 진정 크림 50ml (시카 73%)</span>
+        <span>공신력 있는 어워드에서
+          <br>
+          인증받은 글로오아시스 제품들을 만나보세요
+        </span>
 
-  <a href="#" class="est-btn">견적
-    <br>
-    신청</a>
-
-  <div class="chat">
-    <div>
-      <p>오스카 상담신청</p>
-
-      <div class="input-box">
-        <input type="text" placeholder="이름">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="연락처">
-      </div>
-
-      <div class="select">
-        <span>제품선택</span>
-        <img src="/img/arrow-w.svg" alt="">
-
-        <ul>
-          <li>제품선택</li>
-          <li>수동형 스카이루버 (파고라)</li>
-          <li>전동형 스카이루버 (파고라)</li>
-          <li>솔라 스카이루버 (파고라)</li>
-          <li>폴딩도어</li>
-          <li>슬라이딩도어</li>
-          <li>짚 스크린 (전동)</li>
-          <li>데크</li>
-          <li>레일링</li>
-          <li>기타제품</li>
-        </ul>
-      </div>
-
-      <div class="check">
-        <i class="fa-solid fa-circle-check"></i>
-
-        <span>개인정보 수집/이용 동의</span>
-      </div>
-
-      <div class="btn">상담신청</div>
-
-      <div class="chat-img-box">
-        <img src="/img/imgi_30_SMS_icon01.png" alt="">
-      </div>
-    </div>
-  </div>
-
-  <section class="section-1">
-    <video autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="" id="homeVdo">
-      <source src="https://oska.co.kr/_File/menu//movFile_1725515345_0.mp4
-      " type="video/mp4">
-    </video>
-
-    <ul>
-      <li>
-        <a href="#">
-          <div class="txt">
-            <strong>파고라</strong>
-            <p>새로운 라이프 스타일</p>
-          </div>
-
-          <div class="more">
-            <span>more view</span>
-            <img src="/img/imgi_2_arrow.png" alt="">
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="txt">
-            <strong>폴딩/슬라이딩/간살</strong>
-            <p>맑고 깨끗한 개방감</p>
-          </div>
-
-          <div class="more">
-            <span>more view</span>
-            <img src="/img/imgi_2_arrow.png" alt="">
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="txt">
-            <strong>스크린/외장재</strong>
-            <p>유연하면서 견고한 보호의 벽</p>
-          </div>
-
-          <div class="more">
-            <span>more view</span>
-            <img src="/img/imgi_2_arrow.png" alt="">
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="txt">
-            <strong>데크</strong>
-            <p>고퀄리티 프리미엄 데크</p>
-          </div>
-
-          <div class="more">
-            <span>more view</span>
-            <img src="/img/imgi_2_arrow.png" alt="">
-          </div>
-        </a>
-      </li>
-    </ul>
-
-    <div class="main-txt">
-      <p data-aos="fade-up" data-aos-duration="1500">프리미엄 공간 스타일링</p>
-      <strong data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">EXTERIOR MASTER</strong>
-    </div>
-
-    <a href="#" class="kakao-btn">
-      <img src="/img/imgi_38_icon-kakaotalk.svg" alt="">
-      <img src="/img/kakao-b.svg" alt="">
-    </a>
-
-    <div class="scroll-box">
-      <span>scroll</span>
-      <div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-2">
-    <div class="txt-box-2">
-      <p data-aos="fade-up" data-aos-duration="1000">SKYLOUVER PRODUCT</p>
-      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">블레이드 개폐 조절로 통풍과 차양이 뛰어나며
-        <br>
-        알루미늄 소재의 특성상 반영구적 사용이 가능한 시스템파고라입니다.        
-      </p>
-    </div>
-
-    <div class="swiper-box-2" data-aos="fade-up">
-      <div class="swiper mySwiper swiper-2">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#">
-              <div>
-                <img src="/img/imgi_3_brandFiles1_1750664639_0.jpg" alt="">
-              </div>
-      
-              <div class="txt-2">
-                <p>STAY</p>
-                <p>스테이는 경량형 시스템 파고라로,
-                  <br>
-                  독일산 수동기어를 사용한 모델입니다.
-                </p>
-      
-                <div>VIEW MORE
-                  <img src="/img/plus.svg" alt="">
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <div>
-                <img src="/img/imgi_4_brandFiles2_1750664639_0.jpg" alt="">
-              </div>
-      
-              <div class="txt-2">
-                <p>AIREA</p>
-                <p>에이리어는 전동식 시스템 파고라로,
-                  <br>
-                  LED등 옵션과 글라스 도어가 추가 가능합니다.
-                </p>
-      
-                <div>VIEW MORE
-                  <img src="/img/plus.svg" alt="">
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <div>
-                <img src="/img/imgi_5_brandFiles3_1750664639_0.jpg" alt="">
-              </div>
-      
-              <div class="txt-2">
-                <p>OPERA</p>
-                <p>영감이 샘솟는 특별한 공간을 선사하는
-                  <br>
-                  오스카의 프리미엄 파고라입니다.
-                </p>
-      
-                <div>VIEW MORE
-                  <img src="/img/plus.svg" alt="">
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-3">
-    <div class="txt-box-3" >
-      <p>OPTION</p>
-      <p>파고라의 다양한 옵션들을 만나보세요.</p>
-    </div>
-
-    <div class="swiper-box-3">
-      <div class="swiper mySwiper swiper-3">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="/img/imgi_42_pInfoFiles0_1750666894_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>FOLDING DOOR</span>
-                  <strong>오스카 폴딩도어</strong>
-                  <p>누수방지 및 녹방지 매커니즘이 적용된 오스카 폴딩도어는 우천 및 수분이 많은 실내, 실외 환경에서의
-                    활용이 가능하며 방풍성이 우수해 난방비 절감에 효과적입니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_43_pInfoFiles1_1750658019_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>MULTI SLIDING</span>
-                  <strong>오스카 멀티 슬라이딩</strong>
-                  <p>고급스러운 마감재를 사용한 오스카 멀티 슬라이딩 도어는 프레임의 제약이 없어 더욱 아름다운 시야를 누리며,
-                    10T 규격의 강화유리를 사용해 튼튼하고 견고합니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_44_pInfoFiles2_1750666894_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>GLASS FOLDING</span>
-                  <strong>오스카 글라스 폴딩도어</strong>
-                  <p>90% 이상의 개방감과 개폐율로 어느 장소에나 구애 받지 않고 설치가 가능하며, 오랜 기간 동안의 반복적인
-                    사용에도 유지할 수 있도록 내구성을 높인 글라스 도어입니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_45_pInfoFiles3_1750658019_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>KLAVIER</span>
-                  <strong>클라비아</strong>
-                  <p>독일어로 '피아노'라는 의미를 가진 클라비아는 피아노처럼 단정하고 정교한 생김새로 균형 잡힌 건물 외관을 선사합니다.
-                    가볍고 녹이나 부식을 방지하는 내구성 높은 외장재입니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_46_pInfoFiles4_1750658019_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>LED BLADE</span>
-                  <strong>LED 블레이드</strong>
-                  <p>오스카 프리미엄 블레이드와 파고라 공간의 필수 옵션인 LED 라인등이
-                    접목된 옵션으로 더욱 활용도 높은 파고라를 조성하며, 심미성을 높힙니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_47_pInfoFiles5_1750658019_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>LOUVER PARTITION</span>
-                  <strong>간살</strong>
-                  <p>사선의 형태로 제작되어 외부의 시선 차단을 통해 프라이빗한 야외활동을 제공합니다.
-                    가로 간살과 세로 간살 두 가지 제품을 제공하며, 다양한 색상으로 구현이 가능합니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_48_pInfoFiles6_1750658019_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>INSECT SCREEN</span>
-                  <strong>주름 방충망</strong>
-                  <p>주름이 있는 구조로 설계되어 필요할 때 쉽게 펼치고 접을 수 있는 편리함을 제공합니다.
-                    특수한 메쉬 구조로 제작되어, 작은 벌레나 해충이 들어오는 것을 효과적으로 차단합니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_40_pInfoFiles7_1750658020_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>SCREEN</span>
-                  <strong>스크린 전동 · 수동</strong>
-                  <p>특별히 고안된 레일과 특수 접합된 지퍼 헤드가 원단을 잡아주어 내구성이 뛰어나며, 짚 시스템으로
-                    원단이 말려 걷히기 때문에 하부는 턱이나 레일이 없어 공간 활용에 탁월합니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/imgi_41_pInfoFiles8_1750658020_0.jpg" alt="">
-                <div class="bg"></div>
-
-                <div class="txt-3">
-                  <span>RETRACTABLE SCREEN</span>
-                  <strong>스크린 방충망</strong>
-                  <p> 해충을 차단하면서도 통풍을 원활하게 해주는 제품으로 내구성이 뛰어나고,
-                    UV 차단 기능이 있어 쾌적한 환경을 유지할 수 있습니다.</p>
-                </div>
-
-                <a href="#" class="plus-btn"></a>
-              </div>
-          </div>
-
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-4">
-    <ul>
-      <li>
-        <a href="#">
-          <img src="/img/imgi_49_productFiles1_1754974897_0.jpg" alt="">
-          <div class="bg"></div>
-
-          <div class="txt-4">
-            <strong>STONE DESK</strong>
-            <p>부자재를 쌓아놓고 먼지, 소음에 시달리며
-              <br>
-              양중을 위해 수많은 인력과 크레인까지 동원해야 했던
-              <br>
-              습식 시공에서 이제는 벗어날 수 있습니다.
-            </p>
-
-            <span>자세히보기</span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="/img/imgi_50_productFiles2_1754974897_0.jpg" alt="">
-          <div class="bg"></div>
-
-          <div class="txt-4">
-            <strong>AIREA SOLAR</strong>
-            <p>전동형 파고라의 틀에 태양광 블레이드와
-              <br>
-              패널을 더한 효율적인 시스템 파고라
-              <br>
-              Solar 에디션 입니다.
-            </p>
-
-            <span>자세히보기</span>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <section class="section-5">
-    <div>
-      <div class="title-5" data-aos="fade-up" data-aos-duration="1000">
-        <p>PROJECT</p>
-        <a href="#">더보기
-          <img src="/img/plus.svg" alt="">
-        </a>
-      </div>
-
-      <div class="swiper-box-5" data-aos="fade-up" data-aos-duration="1000">
-        <div class="swiper mySwiper swiper-5">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img-5">
-                  <img src="/img/imgi_7_file_1750746958_.jpg" alt="">
-                </div>
-
-                <div class="txt-5">
-                  <div class="txt">
-                    <div>OPERA EXTRA</div>
-                    <P>단순한 쉼터를 넘어서, 아파트의 가치를 높이는 스카이루버</P>
-                  </div>
-                  <div class="plus-btn"></div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img-5">
-                  <img src="/img/imgi_8_file_1742806382_.jpg" alt="">
-                </div>
-
-                <div class="txt-5">
-                  <div class="txt">
-                    <div>ATHENA / OPERA</div>
-                    <P>2025 코리아빌드위크 / 2025 KOREABUILD WEEK</P>
-                  </div>
-                  <div class="plus-btn"></div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img-5">
-                  <img src="/img/imgi_9_file_1736420414_.jpg" alt="">
-                </div>
-
-                <div class="txt-5">
-                  <div class="txt">
-                    <div>AIREA</div>
-                    <P>실용적이고 자연과 조화를 이루는 루프탑 파고라</P>
-                  </div>
-                  <div class="plus-btn"></div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img-5">
-                  <img src="/img/imgi_10_file_1732673838_.jpg" alt="">
-                </div>
-
-                <div class="txt-5">
-                  <div class="txt">
-                    <div>OPERA EXTRA</div>
-                    <P>병원 루프탑 테라스 익스테리어 시스템파고라와 스톤데크</P>
-                  </div>
-                  <div class="plus-btn"></div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img-5">
-                  <img src="/img/imgi_11_file_1724302057_.jpg" alt="">
-                </div>
-
-                <div class="txt-5">
-                  <div class="txt">
-                    <div>OPERA EXTRA</div>
-                    <P>오스카 서울 프라이빗 쇼룸 / OSKA SHOWROOM IN SEOUL</P>
-                  </div>
-                  <div class="plus-btn"></div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-6">
-    <div class="box-6">
-      <div class="txt-box-6" data-aos="fade-up" data-aos-duration="1000">
-        AWARD
-        <br>
-        AND
-        <br>
-        PATENTS
-      </div>
-
-      <div class="swiper-box-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-        <div class="swiper mySwiper swiper-6">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="img-6">
-                <img src="/img/imgi_12_awards_sect_logo1.svg" alt="">
-              </div>
-
-              <p class="txt-6">
-                경기도 공공시설물
-                <br>
-                우수디자인 인증
-              </p>
-            </div>
-            <div class="swiper-slide">
-              <div class="img-6">
-                <img src="/img/imgi_13_awards_sect_logo4.svg" alt="">
-              </div>
-
-              <p class="txt-6">
-                3년 연속 대한민국
-                <br>
-                소비자만족지수 1위
-              </p>
-            </div>
-            <div class="swiper-slide">
-              <div class="img-6">
-                <img src="/img/imgi_14_awards_sect_logo2.svg" alt="">
-              </div>
-
-              <p class="txt-6">
-                품질만족지수
-                <br>
-                우수디자인 인증
-              </p>
-            </div>
-            <div class="swiper-slide">
-              <div class="img-6">
-                <img src="/img/imgi_15_awards_sect_logo3.svg" alt="">
-              </div>
-
-              <p class="txt-6">
-                대한민국 프리미엄
-                <br>
-                브랜드 대상
-              </p>
-            </div>
-            <div class="swiper-slide">
-              <div class="img-6">
-                <img src="/img/imgi_16_awards_sect_logo5.svg" alt="">
-              </div>
-
-              <p class="txt-6">
-                특허청
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-7">
-    <div class="bg-img">
-      <div class="bg-7"></div>
-    </div>
-
-    <div class="txt-box-7">
-      <h3>Contact us</h3>
-      <p>새로운 공간에서 펼쳐지는 이야기의 시작</p>
-      <a href="#">more view</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-box">
-      <div class="company">
         <div>
-          <strong>COMPANY</strong>
-          <b>1800-5945</b>
-          <p>경기도 평택시 오성면 오성서로 5-9, (주)오스카</p>
-          <div class="email">
-            <p>E</p>
-            office@oska.co.kr
+          <span>Find your glow</span>
+          <div class="img-2">
+            <img src="/img/imgi_arrow.svg" alt="">
           </div>
         </div>
       </div>
-      <h1>
+
+      <div class="swiper-box-2">
+        <div class="swiper mySwiper swiper-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/imgi_2.png"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/imgi_3.png"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/imgi_4.png"/>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-3">
+      <div class="txt-box-3">
+        <h1>Best Seller</h1>
+        <span>무루무루 울트라 카밍 토너 120ml</span>
+        <span>공신력 있는 어워드에서
+          <br>
+          인증받은 글로오아시스 제품들을 만나보세요
+        </span>
+
+        <div>
+          <span>Find your glow</span>
+          <div class="img-3">
+            <img src="/img/imgi_arrow.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-box-3">
+        <div class="swiper mySwiper swiper-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/imgi_5.png"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/imgi_6.png"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/imgi_4.png"/>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-4">
+      <div class="txt-box-4">
+        <h1>Best Seller</h1>
+        <span>메이크업멜트 클렌징밤 100ml</span>
+        <span>공신력 있는 어워드에서
+          <br>
+          인증받은 글로오아시스 제품들을 만나보세요
+        </span>
+
+        <div>
+          <span>Find your glow</span>
+          <div class="img-4">
+            <img src="/img/imgi_arrow.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-box-4">
+        <div class="swiper mySwiper swiper-4">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/imgi_5.png"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/imgi_6.png"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/imgi_4.png"/>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-5">
+      <div class="txt-box-5">
+        <h1>Skin Type</h1>
+        <span>피부 타입별로 검증된 글로오아시스의
+          <br>
+          추천 라인업을 경험해보세요
+        </span>
+
+        <div class="tap-menu">
+          <div>
+            <span>DRY</span>
+            <span>건성</span>
+          </div>
+          <div>
+            <span>OILY</span>
+            <span>지성</span>
+          </div>
+          <div>
+            <span>SENSITIVE</span>
+            <span>민감성</span>
+          </div>
+          <div>
+            <span>COMBINATION</span>
+            <span>복합성</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-box-5">
         <a href="#">
-          <img src="/img/imgi_37_logo-wh-txt.svg" alt="">
+          <img src="" alt="">
         </a>
-      </h1>
-      <div class="copy">
-        <span>CEO</span>
-        <span>이한울</span>
-        <span>ⓒ 2022 OSKA.</span>
+        <a href="#">
+          <img src="" alt="">
+        </a>
+        <a href="#">
+          <img src="" alt="">
+        </a>
+        <a href="#">
+          <img src="" alt="">
+        </a>
       </div>
-
-      <div class="sns-box">
-        <ul>
-          <li><a href="#"><img src="/img/imgi_23_icon-blog-wh.svg" alt=""></a></li>
-          <li><a href="#"><img src="/img/imgi_24_icon-facebook.svg" alt=""></a></li>
-          <li><a href="#"><img src="/img/imgi_25_icon-youtube.svg" alt=""></a></li>
-          <li><a href="#"><img src="/img/imgi_26_icon-insta.svg" alt=""></a></li>
-        </ul>
-      </div>
-    </div>
-
-    
-  </footer>
+    </section>
+  </div>
 </body>
 </html>
