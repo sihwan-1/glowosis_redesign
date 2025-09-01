@@ -355,7 +355,7 @@ header > .ico-box > div > img {
 }
 /* ----------------------------section-4 end---------------------------- */
 
-/* ----------------------------section-5 end---------------------------- */
+/* ----------------------------section-5 start---------------------------- */
 .section-5 {
   width: 100vw;
   height: 100%;
@@ -415,16 +415,12 @@ header > .ico-box > div > img {
   font-weight: 600;
 }
 
+.section-5 > .txt-box-5 > .tap-menu > div.active > span {
+  color: #E99F7E;
+}
+
 .section-5 > .txt-box-5 > .tap-menu > div > span:last-child {
   font-size: 17px;
-}
-
-.section-5 > .swiper-box-5 .swiper-slide {
-  height: 100vh;
-}
-
-.section-5 > .swiper-box-5 img {
-  height: 100%;
 }
 
 .section-5 > .img-box-5 {
@@ -432,6 +428,166 @@ header > .ico-box > div > img {
   position: absolute;
   top: 0;
   right: 17%;
-  background-color: #000;
+  background-color: #fff;
   height: 100vh;
+}
+
+.section-5 > .img-box-5 > a {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+
+.section-5 > .img-box-5 > a > img {
+  height: 100%;
+}
+/* ----------------------------section-5 end---------------------------- */
+
+/* ----------------------------section-6 start---------------------------- */
+.scroll-container section.section-6 {
+  flex: 0 0 3500px;
+}
+
+.section-6 {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  margin-right: 500px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.section-6 > .txt-box-6 {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  position: sticky; /* 화면에 고정 */
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-family: 'Lato', sans-serif;
+}
+
+.section-6 > .txt-box-6 > h1 {
+  margin-bottom: 30px;
+  font-size: 80px;
+  font-weight: 700;
+  color: #2A3D45;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.section-6 > .txt-box-6 > span {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  line-height: 32px;
+  opacity: .4;
+}
+
+.section-6 > .img-box-6 {
+  width: 544px;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  background-color: #F5F1EE;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+.section-6 > .img-box-6.second {
+  right: 25%;
+  justify-content: flex-end;
+}
+
+.section-6 > .img-box-6.third {
+  right: 0;
+} 
+
+.section-6 > .img-box-6 > .txt-box-6 {
+  flex-direction: column;
+  display: flex;
+  padding: 50px 0;
+}
+
+.section-6 > .img-box-6 > .txt-box-6 > span {
+  font-size: 50px;
+  letter-spacing: -2%;
+  line-height: 80px;
+  margin-bottom: 24px;
+}
+
+.section-6 > .img-box-6 > .txt-box-6 > span:last-child {
+  font-size: 22px;
+  line-height: 35.2px;
+  margin-bottom: 0;
+}
+/* ----------------------------section-6 end---------------------------- */
+
+/* ----------------------------section-7 start---------------------------- */
+.section-7 {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  margin-right: 500px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.section-7 > .txt-box-7 {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  position: sticky; /* 화면에 고정 */
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-family: 'Lato', sans-serif;
+}
+
+.section-7 > .txt-box-7 > h1 {
+  margin-bottom: 30px;
+  font-size: 80px;
+  font-weight: 700;
+  color: #2A3D45;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.section-7 > .txt-box-7 > span {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  line-height: 32px;
+  opacity: .4;
+}
+
+.section-7 > .sns {
+  width: 306px;
+  height: 306px;
+  display: block;
+  position: absolute;
+}
+
+.section-7 > .sns-1 {
+  top: 0;
+}
+
+.section-7 > .sns-2 {
+  top: 33.333%;
+}
+
+.section-7 > .sns-3 {
+  top: 66.66%;
+}
+
+.section-7 > .sns > img {
+  height: 100%;
 }

@@ -34,6 +34,14 @@ $(document).ready(function(){
   });
 });
 
+$(function(){
+  $(".tap-menu > div").click(function(){
+    $(".tap-menu > div").removeClass("active");
+    $(this).addClass("active");
+    $(".img-box-5 > a").fadeOut().eq($(this).index()).fadeIn();
+  }).eq(0).click(); // 처음 상태 세팅
+});
+
 function Swiper_2() {
   var swiper = new Swiper(".swiper-2", {
     effect: "fade",
