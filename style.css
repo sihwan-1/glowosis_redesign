@@ -77,6 +77,27 @@ header > .menu-box > li > a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+header > .menu-box > li > a::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all .5s;
+}
+
+header > .menu-box > li > a:hover::after {
+  width: 100%;
+}
+
+header.black > .menu-box > li > a {
+  color: #2A3D45;
+  position: relative;
 }
 
 header > .ico-box {
@@ -95,6 +116,18 @@ header > .ico-box > div {
 
 header > .ico-box > div > img {
   cursor: pointer;
+}
+
+header > .ico-box > div > img:last-child {
+  display: none;
+}
+
+header.black > .ico-box > div > img:first-child {
+  display: none;
+}
+
+header.black > .ico-box > div > img:last-child {
+  display: block;
 }
 /* ----------------------------header end---------------------------- */
 
@@ -189,6 +222,29 @@ header > .ico-box > div > img {
 .section-2 > .swiper-box-2 img {
   height: 100%;
 }
+
+.section-2 > .img-box-2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  transition: all .3s;
+  background-color: #E99F7E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2 > .img-box-2:hover {
+  border-radius: 50%;
+}
+
+.section-2 > .img-box-2 > img {
+  height: 100%;
+  transition: all .3s;
+}
 /* ----------------------------section-2 end---------------------------- */
 
 /* ----------------------------section-3 start---------------------------- */
@@ -271,6 +327,29 @@ header > .ico-box > div > img {
   top: 0;
   right: 17%;
 }
+
+.section-3 > .img-box-3 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transition: all .3s;
+  background-color: #E99F7E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-3 > .img-box-3:hover {
+  border-radius: 50%;
+}
+
+.section-3 > .img-box-3 > img {
+  height: 100%;
+  transition: all .3s;
+}
 /* ----------------------------section-3 end---------------------------- */
 
 /* ----------------------------section-4 start---------------------------- */
@@ -352,6 +431,29 @@ header > .ico-box > div > img {
   position: absolute;
   top: 0;
   right: 17%;
+}
+
+.section-4 > .img-box-4 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  transition: all .3s;
+  background-color: #E99F7E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-4 > .img-box-4:hover {
+  border-radius: 50%;
+}
+
+.section-4 > .img-box-4 > img {
+  height: 100%;
+  transition: all .3s;
 }
 /* ----------------------------section-4 end---------------------------- */
 
@@ -570,22 +672,45 @@ header > .ico-box > div > img {
 }
 
 .section-7 > .sns {
-  width: 306px;
-  height: 306px;
+  width: 300px;
+  height: 300px;
   display: block;
   position: absolute;
 }
 
 .section-7 > .sns-1 {
   top: 0;
+  right: 50%;
 }
 
 .section-7 > .sns-2 {
   top: 33.333%;
+  right: 40%;
 }
 
 .section-7 > .sns-3 {
   top: 66.66%;
+  right: 20%;
+}
+
+.section-7 > .sns-4 {
+  top: 0;
+  right: 35%;
+}
+
+.section-7 > .sns-5 {
+  top: 33.333%;
+  right: 24%;
+}
+
+.section-7 > .sns-6 {
+  top: 66.66%;
+  right: 65%;
+}
+
+.section-7 > .sns-7 {
+  top: 66.66%;
+  right: 37%;
 }
 
 .section-7 > .sns > img {

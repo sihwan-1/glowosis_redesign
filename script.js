@@ -35,6 +35,41 @@ $(document).ready(function(){
 });
 
 $(function(){
+  const $header = $("header"); 
+  const $scroll = $(".scroll-container"); // 스크롤되는 요소
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 500) {
+      $header.addClass("black");
+    } else {
+      $header.removeClass("black");
+    }
+  });
+});
+
+$(function(){
+  const $scroll = $(".scroll-container");
+  const $sec = $(".section-2");
+  const $img = $(".img-box-2");
+
+  $scroll.on("scroll", function(){
+    // 현재 수평 스크롤 위치
+    let scrollLeft = $scroll.scrollLeft();
+
+    // section-2의 시작 위치와 너비
+    let secOffset = $sec[0].offsetLeft;
+    let secWidth = $sec.outerWidth();
+
+    // progress 계산 (0~1)
+    let progress = (scrollLeft - secOffset) / secWidth;
+    progress = Math.max(0, Math.min(progress, 1));
+
+    // img-box-2 y 이동 (1.2배)
+    gsap.set($img, { x: -progress * 200 * 10 });
+  });
+});
+
+$(function(){
   $(".tap-menu > div").click(function(){
     $(".tap-menu > div").removeClass("active");
     $(this).addClass("active");
@@ -68,6 +103,29 @@ $(function(){
     });
   });
 });
+
+$(function(){
+  const $scroll = $(".scroll-container");
+  const $sec = $(".section-3");
+  const $img = $(".img-box-3");
+
+  $scroll.on("scroll", function(){
+    // 현재 수평 스크롤 위치
+    let scrollLeft = $scroll.scrollLeft();
+
+    // section-2의 시작 위치와 너비
+    let secOffset = $sec[0].offsetLeft;
+    let secWidth = $sec.outerWidth();
+
+    // progress 계산 (0~1)
+    let progress = (scrollLeft - secOffset) / secWidth;
+    progress = Math.max(0, Math.min(progress, 1));
+
+    // img-box-2 y 이동 (1.2배)
+    gsap.set($img, { x: -progress * 200 * 10 });
+  });
+});
+
 
 function Swiper_3() {
   var swiper = new Swiper(".swiper-3", {
@@ -106,8 +164,29 @@ function Swiper_4() {
     },
   });
 }
-
 Swiper_4();
+
+$(function(){
+  const $scroll = $(".scroll-container");
+  const $sec = $(".section-4");
+  const $img = $(".img-box-4");
+
+  $scroll.on("scroll", function(){
+    // 현재 수평 스크롤 위치
+    let scrollLeft = $scroll.scrollLeft();
+
+    // section-2의 시작 위치와 너비
+    let secOffset = $sec[0].offsetLeft;
+    let secWidth = $sec.outerWidth();
+
+    // progress 계산 (0~1)
+    let progress = (scrollLeft - secOffset) / secWidth;
+    progress = Math.max(0, Math.min(progress, 1));
+
+    // img-box-2 y 이동 (1.2배)
+    gsap.set($img, { x: -progress * 200 * 10 });
+  });
+});
 
 $(function(){
   const $box = $(".swiper-box-5");
@@ -120,5 +199,39 @@ $(function(){
       overwrite: "auto",
       duration: 0.3
     });
+  });
+});
+
+$(function(){
+  const $scroll = $(".scroll-container");
+  const $sec = $(".section-7");
+  const $sns = $(".sns-1");
+  const $sns_2 = $(".sns-2");
+  const $sns_3 = $(".sns-3");
+  const $sns_4 = $(".sns-4");
+  const $sns_5 = $(".sns-5");
+  const $sns_6 = $(".sns-6");
+  const $sns_7 = $(".sns-7");
+
+  $scroll.on("scroll", function(){
+    // 현재 수평 스크롤 위치
+    let scrollLeft = $scroll.scrollLeft();
+
+    // section-2의 시작 위치와 너비
+    let secOffset = $sec[0].offsetLeft;
+    let secWidth = $sec.outerWidth();
+
+    // progress 계산 (0~1)
+    let progress = (scrollLeft - secOffset) / secWidth;
+    progress = Math.max(0, Math.min(progress, 1));
+
+    // img-box-2 y 이동 (1.2배)
+    gsap.set($sns, { x: -progress * 200 * 4 });
+    gsap.set($sns_2, { x: -progress * 200 * 8 });
+    gsap.set($sns_3, { x: -progress * 200 * 11 });
+    gsap.set($sns_4, { x: -progress * 200 * 5 });
+    gsap.set($sns_5, { x: -progress * 200 * 7 });
+    gsap.set($sns_6, { x: -progress * 200 * 1.5 });
+    gsap.set($sns_7, { x: -progress * 200 * 6.5 });
   });
 });
