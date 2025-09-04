@@ -131,6 +131,57 @@ header.black > .ico-box > div > img:last-child {
 }
 /* ----------------------------header end---------------------------- */
 
+/* ----------------------------left-btn start---------------------------- */
+.left-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: #E99F7E;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.left-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* ----------------------------left-btn end---------------------------- */
+
+/* ----------------------------scroll start---------------------------- */
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;              /* Firefox 전용 */
+  scrollbar-color: #c9c9c9 #f5f5f5;   /* (thumb, track) Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* 가로 스크롤바 두께 */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f5f5f5; /* 트랙 배경 */
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #bbb;       /* 스크롤바 색상 */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #888;       /* 호버 시 진해짐 */
+}
+/* ----------------------------scroll end---------------------------- */
+
 /* ----------------------------section-1 start---------------------------- */
 .section-1 {
   width: 100vw;
@@ -231,7 +282,7 @@ header.black > .ico-box > div > img:last-child {
   right: 0;
   z-index: 10;
   transition: all .3s;
-  background-color: #E99F7E;
+  background-color: #F0D6C8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,6 +295,12 @@ header.black > .ico-box > div > img:last-child {
 .section-2 > .img-box-2 > img {
   height: 100%;
   transition: all .3s;
+}
+
+.section-2 > .swiper-box-2 > .swiper-pagination {
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 /* ----------------------------section-2 end---------------------------- */
 
@@ -336,7 +393,7 @@ header.black > .ico-box > div > img:last-child {
   right: 0;
   z-index: 10;
   transition: all .3s;
-  background-color: #E99F7E;
+  background-color: #F0D6C8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -441,7 +498,7 @@ header.black > .ico-box > div > img:last-child {
   right: 0;
   z-index: 10;
   transition: all .3s;
-  background-color: #E99F7E;
+  background-color: #F0D6C8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -600,6 +657,23 @@ header.black > .ico-box > div > img:last-child {
   align-items: center;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
+  transition: all .3s;
+}
+
+.section-6 > .img-box-6:hover {
+  background-color: #F0D6C8;
+}
+
+.section-6 > .img-box-6 > div {
+  overflow: hidden;
+}
+
+.section-6 > .img-box-6 > div > img {
+  transition: all .3s;
+}
+
+.section-6 > .img-box-6 > div:hover > img {
+  transform: scale(1.2);
 }
 
 .section-6 > .img-box-6.second {
@@ -672,8 +746,8 @@ header.black > .ico-box > div > img:last-child {
 }
 
 .section-7 > .sns {
-  width: 300px;
-  height: 300px;
+  width: 302px;
+  height: 302px;
   display: block;
   position: absolute;
 }
@@ -685,7 +759,7 @@ header.black > .ico-box > div > img:last-child {
 
 .section-7 > .sns-2 {
   top: 33.333%;
-  right: 40%;
+  right: 44%;
 }
 
 .section-7 > .sns-3 {
@@ -700,7 +774,7 @@ header.black > .ico-box > div > img:last-child {
 
 .section-7 > .sns-5 {
   top: 33.333%;
-  right: 24%;
+  right: 20%;
 }
 
 .section-7 > .sns-6 {
@@ -709,10 +783,87 @@ header.black > .ico-box > div > img:last-child {
 }
 
 .section-7 > .sns-7 {
+  top: 0%;
+  right: 57%;
+}
+
+.section-7 > .sns-8 {
+  top: 33.33%;
+  right: 62%;
+}
+
+.section-7 > .sns-9 {
   top: 66.66%;
+  right: 29%;
+}
+
+.section-7 > .sns-10 {
+  top: 0%;
+  right: 27%;
+}
+
+.section-7 > .sns-11 {
+  top: 33.33%;
   right: 37%;
 }
 
 .section-7 > .sns > img {
   height: 100%;
+}
+/* ----------------------------section-7 end---------------------------- */
+
+/* ----------------------------footer---------------------------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1920px;
+  color: #2A3D45;
+}
+
+footer > .footer-box {
+  display: flex;
+  width: 1266px;
+}
+
+footer > .footer-box > .f-footer {
+  flex-grow: 1;
+}
+
+footer > .footer-box > .f-footer > .footer-logo {
+  width: 157px;
+  height: 27px;
+  margin-bottom: 241px;
+}
+
+footer > .footer-box > .f-footer > .copyright {
+  white-space: nowrap;
+  font-size: 17px;
+}
+
+footer > .footer-box > .s-footer > .footer-txt-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 135px;
+  font-family: 'Lato', sans-serif;
+}
+
+footer > .footer-box > .s-footer > .footer-txt-box > .footer-txt {
+  display: flex;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+footer > .footer-box > .s-footer > .sns-box > ul {
+  display: flex;
+  gap: 121px;
+}
+
+footer > .footer-box > .s-footer > .sns-box > ul > li > a {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

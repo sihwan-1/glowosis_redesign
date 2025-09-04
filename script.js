@@ -3,11 +3,17 @@ $(document).ready(function(){
   const $video = $(".section-1 video");
   let scrollPos = 0;
 
+  $scroll.on("scroll", function(){
+    // 애니메이션 걸지 말고 단순 값 동기화만
+    scrollPos = this.scrollLeft;
+  });
+
   $scroll.on("wheel", function(e){
     e.preventDefault();
     const delta = e.originalEvent.deltaY;
 
-    scrollPos += delta;
+    const speed = 3;
+    scrollPos += delta * speed;
 
     const maxScroll = $scroll[0].scrollWidth - $scroll[0].clientWidth;
     if(scrollPos < 0) scrollPos = 0;
@@ -49,6 +55,25 @@ $(function(){
 
 $(function(){
   const $scroll = $(".scroll-container");
+  const $LeftBtn = $(".left-btn");
+
+  // 버튼 클릭 시 맨 처음으로 이동
+  $LeftBtn.click(function(){
+    $scroll.animate({ scrollLeft: 0 }, 600);
+  });
+
+  // 스크롤 감지해서 버튼 표시/숨김
+  $scroll.on("scroll", function(){
+    if ($scroll.scrollLeft() > 500) {  // 300px 이상 이동하면 표시
+      $LeftBtn.addClass("show");
+    } else {
+      $LeftBtn.removeClass("show");
+    }
+  });
+});
+
+$(function(){
+  const $scroll = $(".scroll-container");
   const $sec = $(".section-2");
   const $img = $(".img-box-2");
 
@@ -81,10 +106,11 @@ function Swiper_2() {
   var swiper = new Swiper(".swiper-2", {
     effect: "fade",
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    autoplay: {
+      delay: 3000, // 3초마다 자동 슬라이드
+      disableOnInteraction: false, // 사용자가 슬라이드 조작해도 자동 재생 유지
     },
+    speed: 800,
   });
 }
 
@@ -131,10 +157,11 @@ function Swiper_3() {
   var swiper = new Swiper(".swiper-3", {
     effect: "fade",
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    autoplay: {
+      delay: 3000, // 3초마다 자동 슬라이드
+      disableOnInteraction: false, // 사용자가 슬라이드 조작해도 자동 재생 유지
     },
+    speed: 800,
   });
 }
 
@@ -158,10 +185,11 @@ function Swiper_4() {
   var swiper = new Swiper(".swiper-4", {
     effect: "fade",
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    autoplay: {
+      delay: 3000, // 3초마다 자동 슬라이드
+      disableOnInteraction: false, // 사용자가 슬라이드 조작해도 자동 재생 유지
     },
+    speed: 800,
   });
 }
 Swiper_4();
@@ -212,6 +240,10 @@ $(function(){
   const $sns_5 = $(".sns-5");
   const $sns_6 = $(".sns-6");
   const $sns_7 = $(".sns-7");
+  const $sns_8 = $(".sns-8");
+  const $sns_9 = $(".sns-9");
+  const $sns_10 = $(".sns-10");
+  const $sns_11 = $(".sns-11");
 
   $scroll.on("scroll", function(){
     // 현재 수평 스크롤 위치
@@ -232,6 +264,10 @@ $(function(){
     gsap.set($sns_4, { x: -progress * 200 * 5 });
     gsap.set($sns_5, { x: -progress * 200 * 7 });
     gsap.set($sns_6, { x: -progress * 200 * 1.5 });
-    gsap.set($sns_7, { x: -progress * 200 * 6.5 });
+    gsap.set($sns_7, { x: -progress * 200 * 12 });
+    gsap.set($sns_8, { x: -progress * 200 * 8.5 });
+    gsap.set($sns_9, { x: -progress * 200 * 1 });
+    gsap.set($sns_10, { x: -progress * 200 * 5.6 });
+    gsap.set($sns_11, { x: -progress * 200 * 4.2 });
   });
 });
