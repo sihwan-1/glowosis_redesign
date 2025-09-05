@@ -53,6 +53,32 @@ $(function(){
   });
 });
 
+function Menu_Op() {
+  $('.ico-box > .menu-btn').click(function (){
+    $('.allmenu').addClass('active')
+  });
+
+  $('.allmenu > .container > .close-btn').click(function (){
+    $('.allmenu').removeClass('active')
+  });
+}
+Menu_Op();
+
+function search_Op() {
+  $('.ico-box > .search-btn').click(function (){
+    $('.search').addClass('active')
+    $('.search-bg').addClass('active')
+    $('header').addClass('black')
+  });
+
+  $('.search-bg').click(function (){
+    $('.search').removeClass('active')
+    $('.search-bg').removeClass('active')
+    $('header').removeClass('black')
+  });
+}
+search_Op();
+
 $(function(){
   const $scroll = $(".scroll-container");
   const $LeftBtn = $(".left-btn");
