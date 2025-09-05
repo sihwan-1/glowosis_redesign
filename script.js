@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   const $scroll = $(".scroll-container");
   const $video = $(".section-1 video");
@@ -74,7 +75,6 @@ function search_Op() {
   $('.search-bg').click(function (){
     $('.search').removeClass('active')
     $('.search-bg').removeClass('active')
-    $('header').removeClass('black')
   });
 }
 search_Op();
@@ -94,6 +94,64 @@ $(function(){
       $LeftBtn.addClass("show");
     } else {
       $LeftBtn.removeClass("show");
+    }
+  });
+});
+
+$(function(){
+  const $txt_2 = $(".txt-box-2");
+  const $txt_3 = $(".txt-box-3");
+  const $txt_4 = $(".txt-box-4");
+  const $txt_5 = $(".txt-box-5");
+  const $txt_6 = $(".txt-box-6");
+  const $txt_7 = $(".txt-box-7");
+  const $scroll = $(".scroll-container"); // 스크롤되는 요소
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 3000) {
+      $txt_2.addClass("show");
+    } else {
+      $txt_2.removeClass("show");
+    }
+  });
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 6300) {
+      $txt_3.addClass("show");
+    } else {
+      $txt_3.removeClass("show");
+    }
+  });
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 9600) {
+      $txt_4.addClass("show");
+    } else {
+      $txt_4.removeClass("show");
+    }
+  });
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 12900) {
+      $txt_5.addClass("show");
+    } else {
+      $txt_5.removeClass("show");
+    }
+  });
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 16200) {
+      $txt_6.addClass("show");
+    } else {
+      $txt_6.removeClass("show");
+    }
+  });
+
+  $scroll.on("scroll", function(){
+    if ($(this).scrollLeft() > 20100) {
+      $txt_7.addClass("show");
+    } else {
+      $txt_7.removeClass("show");
     }
   });
 });
@@ -285,15 +343,15 @@ $(function(){
 
     // img-box-2 y 이동 (1.2배)
     gsap.set($sns, { x: -progress * 200 * 4 });
-    gsap.set($sns_2, { x: -progress * 200 * 8 });
-    gsap.set($sns_3, { x: -progress * 200 * 11 });
-    gsap.set($sns_4, { x: -progress * 200 * 5 });
+    gsap.set($sns_2, { x: -progress * 200 * 5 });
+    gsap.set($sns_3, { x: -progress * 200 * 6 });
+    gsap.set($sns_4, { x: -progress * 200 * 5.5 });
     gsap.set($sns_5, { x: -progress * 200 * 7 });
-    gsap.set($sns_6, { x: -progress * 200 * 1.5 });
-    gsap.set($sns_7, { x: -progress * 200 * 12 });
-    gsap.set($sns_8, { x: -progress * 200 * 8.5 });
-    gsap.set($sns_9, { x: -progress * 200 * 1 });
-    gsap.set($sns_10, { x: -progress * 200 * 5.6 });
+    gsap.set($sns_6, { x: -progress * 200 * 4 });
+    gsap.set($sns_7, { x: -progress * 200 * 5 });
+    gsap.set($sns_8, { x: -progress * 200 * 3 });
+    gsap.set($sns_9, { x: -progress * 200 * 4.2 });
+    gsap.set($sns_10, { x: -progress * 200 * 3.6 });
     gsap.set($sns_11, { x: -progress * 200 * 4.2 });
   });
 });
