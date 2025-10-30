@@ -424,13 +424,10 @@ header.black > .ico-box > div > img:last-child {
 /* ----------------------------section-1 start---------------------------- */
 .section-1 {
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.section-1 > video {
-  width: 100%;
+.section-1 > iframe {
+  pointer-events: none;
 }
 /* ----------------------------section-1 end---------------------------- */
 
